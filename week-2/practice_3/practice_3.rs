@@ -1,4 +1,4 @@
-fn fn main() {
+fn main() {
 	let fees = 25_000; // the underscores are cosmetic and just make it easier to read than 25000 or 35000, whe dont use "," becuase that is already registered as a syntax, the compiler sees two different values, if we were to type it normally, 25,000 the compiler sees two seperate values, "25" and "000". The compiler just ignores the underscore "_" in the text
 	let salary:f64 = 35_000.00; // f64 is a 64-bit floating-point data type used to store numbers with decimal points, you do not need to explicitly state it becuase Rust already does this, but there are some cases such as; when you want to create a function or you want to save it in a 32-bit format instead of the default 64-bit. This 64 and 32 bit thing is just a way to allocate memory better.
 	println!("fees is {} and salary is {}",fees,salary ); // notice how fees and salary are formatted but not as strings but as variables in contrast to that of practice 2 where the strings were formatted
