@@ -11,6 +11,6 @@ let quantity = 2.0+1.0+3.0+3.0+1.0;
 let sum = (2.0*toshiba) + (mac) + (3.0*hp) + (3.0*dell) + (acer);
 let average = sum/quantity;
 println!("The sum and average of the sales record are'{}' and '{}' respectively", sum, average);
-// What I learn here was to just use decimals for every variable to have peace of mind in the code and less f64 compiling errors
+// What I learnt here was to just use decimals for every variable to have peace of mind in the code and less f64 compiling errors
 
 }
