@@ -1,0 +1,24 @@
+//introducing a standard inpu/output crate
+use std::io;
+
+fn main() {
+    println!("\nPlease Enter your name.");
+
+    // input name
+    println!("\nStudent Information Management System!");
+
+    //input name
+    println!("\nPlease Enter your name");
+    let mut name = String::new();
+        io::stdin()
+        .read_line(&mut name)
+        .expect("Failed to read input");
+    println!("Your name is {}", name);
+
+    //input age
+    println!("\n Enter your age.");
+    let mut age = String::new();
+        io::stdin().read_line(&mut age).expect("Failed to read input");
+let age:u32 = age.trim().parse().expect("Input not a valid integer");
+println!("Your age is: {}",age);        
+}
