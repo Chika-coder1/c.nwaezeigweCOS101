@@ -17,7 +17,9 @@ println!("a --- Amala & Ewedu Soup -------- #2_500");
 println!("e --- Eba & Ewedu Soup -------- #2_000");
 println!("w --- White Rice & Stew -------- #2_500 ");
 
-println!("To order input the meals code, whichis the first letter of what you are ordering.");
+println!("To order input the meals code, which is the first letter of what you are ordering.");
+
+let mut total_price = 0;
 
 loop {
     let mut user_order = String::new();
@@ -26,7 +28,12 @@ loop {
         .read_line(&mut user_order)
         .expect("Invalid input");
 
-    let mut total_price = 0;
+    let trimmed = user_order.trim().to_lowercase();
+
+    if trimmed == "done" || trimmed.is_empty() {
+        break;
+    }
+
 
     for item in user_order.trim().split(",") {
         let code = item.trim().to_lowercase();
@@ -47,7 +54,17 @@ loop {
             println!("Note: We don't have '{}' on the menu.", code);
         }
     }
-            println!("Your total is:{}", total_price);
-  }          
+            println!("Your total is: #{}", total_price);
+            println!("Add more items or type 'done' to finish:");
+  }
+  println!("Final price: #{}", total_price);
 
+  if total_price > 10_000 {
+  let new_final_price = total_price - (total_price * 5) / 100;
+    println!("You have a 5% discount. Your total is #{}", new_final_price);
+  }          
+else 
+{
+    println!("Your amount is #{}", total_price);
+}
 }
