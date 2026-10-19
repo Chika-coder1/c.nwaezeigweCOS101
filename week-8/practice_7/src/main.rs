@@ -15,4 +15,3 @@ println!("Value at Index 1 = {}", datatype_tuple.1);
 
 // accessing tuple element at index 2
 println!("Value at Index 2 = {}", datatype_tuple.2);
-}
