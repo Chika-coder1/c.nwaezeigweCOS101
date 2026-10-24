@@ -14,7 +14,7 @@ fn main() {
     writeln!(file, "Name,matric_no,Department,level").expect("Failed to write headers");
     for i in 0..name.len() {
 
-        let row = format!("{},{},{},{}\n",name[i],matric_no[i],dept[i],lvl[i] );
+        let row = format!("{},{},{},{}\n",name[i],matric_no[i],dept[i],lvl[i]);
 
         file.write_all(row.as_bytes()).expect("Failed to write row");
     }
